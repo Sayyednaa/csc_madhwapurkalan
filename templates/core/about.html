@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}About Us | CSC Madhwapur Kalan{% endblock %}
+
+{% block content %}
+<!-- Premium Header Section -->
+<section class="section bg-gradient-premium" style="padding: 6rem 0 4rem 0; position: relative;">
+    <div class="bg-shape bg-shape-1" style="opacity: 0.3;"></div>
+    <div class="container text-center animate-fade-up" style="position: relative; z-index: 10;">
+        <h1 class="text-gradient" style="margin-bottom: 1rem;">{% trans "About Us" %}</h1>
+        <p class="text-muted" style="max-width: 600px; margin: 0 auto; font-size: 1.125rem;">
+            {% trans "Dedicated to bringing essential digital and government services directly to your community." %}
+        </p>
+    </div>
+</section>
+
+<!-- Content Section -->
+<section class="section" style="padding-top: 2rem;">
+    <div class="container">
+        <div class="grid grid-cols-1 md-grid-cols-2" style="gap: 4rem; align-items: center;">
+            <div class="animate-fade-up">
+                <h2 style="margin-bottom: 1.5rem;">{% trans "Our Mission" %}</h2>
+                <div class="text-muted" style="font-size: 1.125rem; line-height: 1.8;">
+                    {% if site_content.about_us_intro %}
+                        {{ site_content.about_us_intro|linebreaks }}
+                    {% else %}
+                        <p>{% trans "Our Common Service Centre (CSC) operates as a vital access point for delivery of various electronic services to villages in India, thereby contributing to a digitally and financially inclusive society." %}</p>
+                    {% endif %}
+                    
+                    {% if site_content.about_us_mission %}
+                        <p style="margin-top: 1.5rem;"><strong>{% trans "Mission:" %}</strong> {{ site_content.about_us_mission }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <div class="card animate-fade-up delay-200" style="background: var(--surface-1); padding: 3rem;">
+                <h3 style="color: var(--primary); font-size: 2rem; margin-bottom: 0.5rem;">
+                    {{ site_content.years_of_experience|default:"10" }}+
+                </h3>
+                <h4 style="margin-bottom: 1.5rem;">{% trans "Years of Excellence" %}</h4>
+                <p class="text-muted" style="margin-bottom: 2rem;">
+                    {% trans "We have been proudly serving the Madhwapur Kalan community, processing thousands of applications and making digital services accessible to everyone." %}
+                </p>
+                <div style="display: flex; gap: 1rem; align-items: center; border-top: 1px solid var(--border); padding-top: 1.5rem;">
+                    <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--surface-2); display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <div>
+                        <div style="font-weight: 600;">{% trans "Trusted & Verified" %}</div>
+                        <div class="text-muted" style="font-size: 0.875rem;">{% trans "Authorized CSC Partner" %}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Center Photos Gallery -->
+        <div class="animate-fade-up delay-200" style="margin-top: 5rem;">
+            <div class="text-center mb-8">
+                <h2 style="margin-bottom: 0.5rem;">{% trans "Our Centre" %}</h2>
+                <p class="text-muted">{% trans "Take a look at our facility in Madhwapur Kalan" %}</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md-grid-cols-2" style="gap: 2rem;">
+                <div class="card" style="padding: 0; overflow: hidden; border-radius: var(--radius-lg);">
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG46kbdjn67wCKV5PoeJ1fak10QzT5SG8CInDuflsSnypkoUo1HWdf1mGxBZ6au2rF6LWJONueHBFJG9spBxOIEil6DvQ5B6EysJWVa0r4GAyvqGZ7Ml4krSj-Zi4qlBPKLqD3Spt7J4IBW=s1360-w1360-h1020-rw" 
+                         alt="CSC Center Exterior" 
+                         style="width: 100%; height: 350px; object-fit: cover; display: block; transition: transform 0.5s ease;"
+                         onmouseover="this.style.transform='scale(1.05)'"
+                         onmouseout="this.style.transform='scale(1)'">
+                </div>
+                
+                <div class="card" style="padding: 0; overflow: hidden; border-radius: var(--radius-lg);">
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEo22KTKxnfnBkeVAK0Chteo2V5R4L9JX4a0bOwl5NmyS5xKC8v-XZZSAof_q_TI2mYfiEFhG9pT-8RWNyeWcjOd2tCajTnKDCO51M_ut2bQtOzHksEEm2IEDkZkQEBRthJgPMi-znSIP8=w1000-h1000-n-k-no-nu" 
+                         alt="CSC Center View" 
+                         style="width: 100%; height: 350px; object-fit: cover; display: block; transition: transform 0.5s ease;"
+                         onmouseover="this.style.transform='scale(1.05)'"
+                         onmouseout="this.style.transform='scale(1)'">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Google Maps Embed -->
+        <div class="card animate-fade-up delay-300" style="margin-top: 4rem; padding: 0; overflow: hidden; border-radius: var(--radius-lg);">
+            <iframe 
+                src="https://maps.google.com/maps?q=CSC%20CENTER%20MADHWAPUR%20KALAN&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="450" 
+                style="border:0; display: block;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+{% endblock %}

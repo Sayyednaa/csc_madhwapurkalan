@@ -1,0 +1,266 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Home"
+msgstr "होम"
+
+msgid "Services"
+msgstr "सेवाएं"
+
+msgid "About Us"
+msgstr "हमारे बारे में"
+
+msgid "FAQ"
+msgstr "सामान्य प्रश्न"
+
+msgid "Contact Us"
+msgstr "संपर्क करें"
+
+msgid ""
+"One Place for All Government & Digital Services. Fast, secure, and "
+"affordable."
+msgstr ""
+"सभी सरकारी और डिजिटल सेवाओं के लिए एक स्थान। तेज, सुरक्षित और किफायती।"
+
+msgid "Quick Links"
+msgstr "त्वरित लिंक"
+
+msgid "Contact"
+msgstr "संपर्क"
+
+msgid "All rights reserved."
+msgstr "सर्वाधिकार सुरक्षित।"
+
+msgid "Empowering Citizens"
+msgstr "नागरिकों को सशक्त बनाना"
+
+msgid "One Digital Service at a Time"
+msgstr "एक समय में एक डिजिटल सेवा"
+
+msgid "Contact Us Now"
+msgstr "अभी संपर्क करें"
+
+msgid "Explore Services"
+msgstr "सेवाएं देखें"
+
+msgid "Popular Services"
+msgstr "लोकप्रिय सेवाएं"
+
+msgid "Our most frequently requested digital solutions"
+msgstr "हमारे सबसे अधिक अनुरोधित डिजिटल समाधान"
+
+msgid "Learn More"
+msgstr "अधिक जानें"
+
+msgid "Services are currently being updated."
+msgstr "सेवाएं वर्तमान में अपडेट की जा रही हैं।"
+
+msgid "View All Services"
+msgstr "सभी सेवाएं देखें"
+
+msgid "Why Choose Us"
+msgstr "हमें क्यों चुनें"
+
+msgid "Experience the difference of premium service delivery"
+msgstr "प्रीमियम सेवा वितरण के अंतर का अनुभव करें"
+
+msgid "Fast Service"
+msgstr "तेज सेवा"
+
+msgid "Lightning-fast processing with zero unnecessary delays."
+msgstr "शून्य अनावश्यक देरी के साथ बिजली की तेजी से प्रसंस्करण।"
+
+msgid "Expert Staff"
+msgstr "विशेषज्ञ कर्मचारी"
+
+msgid "Professionals who know exactly what documents you need."
+msgstr "पेशेवर जो वास्तव में जानते हैं कि आपको किन दस्तावेजों की आवश्यकता है।"
+
+msgid "Affordable"
+msgstr "किफायती"
+
+msgid "Transparent pricing. No hidden fees or surprise charges."
+msgstr "पारदर्शी मूल्य निर्धारण। कोई छिपी हुई फीस या अतिरिक्त शुल्क नहीं।"
+
+msgid "Secure"
+msgstr "सुरक्षित"
+
+msgid "Total privacy and security for all your sensitive documents."
+msgstr "आपके सभी संवेदनशील दस्तावेजों के लिए पूर्ण गोपनीयता और सुरक्षा।"
+
+msgid "Need assistance right away?"
+msgstr "क्या तुरंत सहायता चाहिए?"
+
+msgid ""
+"Our dedicated team is ready to help you with your applications and services."
+msgstr ""
+"हमारी समर्पित टीम आपके अनुप्रयोगों और सेवाओं में आपकी सहायता के लिए तैयार "
+"है।"
+
+msgid "Call Now"
+msgstr "अभी कॉल करें"
+
+msgid "Send Inquiry"
+msgstr "पूछताछ भेजें"
+
+msgid "Our Services"
+msgstr "हमारी सेवाएं"
+
+msgid ""
+"We provide a wide range of government and digital services. Browse through "
+"our categories to find exactly what you need."
+msgstr ""
+"हम सरकारी और डिजिटल सेवाओं की एक विस्तृत श्रृंखला प्रदान करते हैं। अपनी "
+"आवश्यकता के अनुसार हमारी श्रेणियों को ब्राउज़ करें।"
+
+msgid "Required Documents:"
+msgstr "आवश्यक दस्तावेज:"
+
+msgid "Processing Time:"
+msgstr "प्रसंस्करण समय:"
+
+msgid "Inquire Now"
+msgstr "अभी पूछताछ करें"
+
+msgid "No services available in this category yet."
+msgstr "इस श्रेणी में अभी तक कोई सेवा उपलब्ध नहीं है।"
+
+msgid "Services will be updated soon."
+msgstr "सेवाएं जल्द ही अपडेट की जाएंगी।"
+
+msgid "Can't find what you're looking for?"
+msgstr "क्या आप वह नहीं ढूंढ पा रहे हैं जो आप खोज रहे हैं?"
+
+msgid ""
+"We offer many custom services. Contact our team to discuss your specific "
+"requirements."
+msgstr ""
+"हम कई कस्टम सेवाएं प्रदान करते हैं। अपनी विशिष्ट आवश्यकताओं पर चर्चा करने के"
+" लिए हमारी टीम से संपर्क करें।"
+
+msgid "Contact Support"
+msgstr "सहायता से संपर्क करें"
+
+msgid ""
+"Dedicated to bringing essential digital and government services directly to "
+"your community."
+msgstr ""
+"अपने समुदाय में सीधे आवश्यक डिजिटल और सरकारी सेवाएं लाने के लिए समर्पित।"
+
+msgid "Our Mission"
+msgstr "हमारा मिशन"
+
+msgid ""
+"Our Common Service Centre (CSC) operates as a vital access point for "
+"delivery of various electronic services to villages in India, thereby "
+"contributing to a digitally and financially inclusive society."
+msgstr ""
+"हमारा सामान्य सेवा केंद्र (CSC) भारत के गांवों में विभिन्न इलेक्ट्रॉनिक "
+"सेवाओं के वितरण के लिए एक महत्वपूर्ण पहुंच बिंदु के रूप में कार्य करता है, "
+"जिससे एक डिजिटल रूप से समावेशी समाज में योगदान होता है।"
+
+msgid "Mission:"
+msgstr "मिशन:"
+
+msgid "Years of Excellence"
+msgstr "उत्कृष्टता के वर्ष"
+
+msgid ""
+"We have been proudly serving the Madhwapur Kalan community, processing "
+"thousands of applications and making digital services accessible to "
+"everyone."
+msgstr ""
+"हम गर्व से माधोपुर कलां समुदाय की सेवा कर रहे हैं, हजारों आवेदनों को संसाधित"
+" कर रहे हैं और सभी के लिए डिजिटल सेवाओं को सुलभ बना रहे हैं।"
+
+msgid "Trusted & Verified"
+msgstr "विश्वसनीय और सत्यापित"
+
+msgid "Authorized CSC Partner"
+msgstr "अधिकृत CSC भागीदार"
+
+msgid ""
+"Get in touch with us for inquiries, appointment bookings, or assistance with"
+" any service."
+msgstr ""
+"पूछताछ, नियुक्ति बुकिंग, या किसी भी सेवा में सहायता के लिए हमसे संपर्क करें।"
+
+msgid "Contact Information"
+msgstr "संपर्क जानकारी"
+
+msgid "Our Location"
+msgstr "हमारा स्थान"
+
+msgid "Phone Number"
+msgstr "फोन नंबर"
+
+msgid "Email Address"
+msgstr "ईमेल पता"
+
+msgid "Business Hours"
+msgstr "व्यापार के घंटे"
+
+msgid "Send us a Message"
+msgstr "हमें एक संदेश भेजें"
+
+msgid "Full Name"
+msgstr "पूरा नाम"
+
+msgid "Mobile Number"
+msgstr "मोबाइल नंबर"
+
+msgid "Interested Service (Optional)"
+msgstr "इच्छुक सेवा (वैकल्पिक)"
+
+msgid "Select a Service"
+msgstr "एक सेवा का चयन करें"
+
+msgid "Message"
+msgstr "संदेश"
+
+msgid "How can we help you?"
+msgstr "हम आपकी मदद कैसे कर सकते हैं?"
+
+msgid "Submit Inquiry"
+msgstr "पूछताछ सबमिट करें"
+
+msgid "Frequently Asked Questions"
+msgstr "अक्सर पूछे जाने वाले प्रश्न"
+
+msgid ""
+"Find quick answers to common questions about our services, processes, and "
+"requirements."
+msgstr ""
+"हमारी सेवाओं, प्रक्रियाओं और आवश्यकताओं के बारे में सामान्य प्रश्नों के "
+"त्वरित उत्तर पाएं।"
+
+msgid "No FAQs available at the moment."
+msgstr "इस समय कोई सामान्य प्रश्न उपलब्ध नहीं है।"
+
+msgid "Still have questions?"
+msgstr "क्या अभी भी प्रश्न हैं?"
+
+msgid ""
+"If you cannot find answer to your question in our FAQ, you can always "
+"contact us. We will answer to you shortly!"
+msgstr ""
+"यदि आपको हमारे FAQ में अपने प्रश्न का उत्तर नहीं मिलता है, तो आप हमेशा हमसे "
+"संपर्क कर सकते हैं। हम जल्द ही आपको जवाब देंगे!"
+
+msgid "Our Centre"
+msgstr "हमारा केंद्र"
+
+msgid "Take a look at our facility in Madhwapur Kalan"
+msgstr "माधोपुर कलां में हमारी सुविधा पर एक नज़र डालें"
+
+msgid "All Services"
+msgstr "सभी सेवाएं"
+
+msgid "One Place for All Government & Digital Services"
+msgstr "सभी सरकारी और डिजिटल सेवाओं के लिए एक स्थान"

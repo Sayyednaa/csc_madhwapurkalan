@@ -1,0 +1,124 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="{% if LANGUAGE_CODE %}{{ LANGUAGE_CODE }}{% else %}en{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}CSC Madhwapur Kalan{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}{% trans 'One Place for All Government & Digital Services' %}{% endblock %}">
+    
+    <!-- Premium CSS -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    
+    <!-- HTMX & Alpine.js -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <script>
+        // Theme initialization
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+        }
+    </script>
+    
+    {% block extra_head %}{% endblock %}
+</head>
+<body x-data="{ 
+    mobileMenu: false,
+    theme: localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'),
+    toggleTheme() {
+        this.theme = this.theme === 'light' ? 'dark' : 'light';
+        localStorage.setItem('theme', this.theme);
+        if (this.theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+        }
+    }
+}">
+    
+    <header class="navbar">
+        <div class="container flex justify-between items-center" style="padding-top: 1rem; padding-bottom: 1rem;">
+            <a href="{% url 'home' %}" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+                <img src="{% static 'img/logo.svg' %}" alt="CSC Madhwapur Kalan Logo" style="height: 40px; width: auto;">
+                <span class="text-gradient md-hidden-text" style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700;">CSC Madhwapur Kalan</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="md-flex items-center gap-6" style="display: none;">
+                <a href="{% url 'home' %}">{% trans "Home" %}</a>
+                <a href="{% url 'services' %}">{% trans "Services" %}</a>
+                <a href="{% url 'about' %}">{% trans "About Us" %}</a>
+                <a href="{% url 'faq' %}">{% trans "FAQ" %}</a>
+                
+                <!-- Language Toggler -->
+                <form action="{% url 'set_language' %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <select name="language" onchange="this.form.submit()" style="background: var(--surface-1); color: var(--ink); border: 1px solid var(--border); padding: 0.25rem 0.5rem; border-radius: var(--radius-sm); font-family: var(--font-body);">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% for lang in LANGUAGES %}
+                            <option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %}selected{% endif %}>
+                                {{ lang.1 }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </form>
+
+                <!-- Theme Toggler -->
+                <button @click="toggleTheme()" style="background:none; border:none; color:var(--ink); cursor:pointer; display:flex; align-items:center;">
+                    <svg x-show="theme === 'light'" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg x-show="theme === 'dark'" style="display:none;" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                
+                <a href="{% url 'contact' %}" class="btn btn-primary">{% trans "Contact Us" %}</a>
+            </nav>
+            
+            <!-- Mobile Menu Toggle -->
+            <button @click="mobileMenu = !mobileMenu" style="background:none; border:none; color:var(--ink); cursor:pointer;" class="md-hidden">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    
+    <footer style="background: var(--surface-1); border-top: 1px solid var(--border); padding-top: 4rem; padding-bottom: 2rem; margin-top: 4rem;">
+        <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+            <div>
+                <img src="{% static 'img/logo.svg' %}" alt="CSC Madhwapur Kalan Logo" style="height: 48px; width: auto; margin-bottom: 1rem;">
+                <h3 class="text-gradient" style="margin-bottom: 0.5rem;">CSC Madhwapur Kalan</h3>
+                <p class="text-muted">{% trans "One Place for All Government & Digital Services. Fast, secure, and affordable." %}</p>
+            </div>
+            <div>
+                <h4>{% trans "Quick Links" %}</h4>
+                <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                    <a href="{% url 'home' %}">{% trans "Home" %}</a>
+                    <a href="{% url 'services' %}">{% trans "All Services" %}</a>
+                    <a href="{% url 'about' %}">{% trans "About Us" %}</a>
+                    <a href="{% url 'faq' %}">{% trans "FAQ" %}</a>
+                </div>
+            </div>
+            <div>
+                <h4>{% trans "Contact" %}</h4>
+                <div class="text-muted" style="display:flex; flex-direction:column; gap:0.5rem;">
+                    <span>+91 73988 93871</span>
+                    <span>Madhwapur Kalan,Siddharth Nagar</span>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center text-muted" style="border-top: 1px solid var(--border); padding-top: 2rem;">
+            &copy; {% now "Y" %} CSC Madhwapur Kalan. {% trans "All rights reserved." %}
+        </div>
+    </footer>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

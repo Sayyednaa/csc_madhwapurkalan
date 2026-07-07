@@ -1,0 +1,46 @@
+{% extends 'dashboard/base.html' %}
+
+{% block page_title %}Appointments{% endblock %}
+
+{% block content %}
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>ID & Date</th>
+                <th>Client Details</th>
+                <th>Service</th>
+                <th>Requested Date & Time</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for apt in appointments %}
+            <tr>
+                <td style="color: var(--ink-muted);">#{{ apt.id }}<br><small>Booked: {{ apt.created_at|date:"M d" }}</small></td>
+                <td>
+                    <div style="font-weight: 500;">{{ apt.name }}</div>
+                    <div style="font-size: 0.875rem; color: var(--ink-muted);">
+                        <a href="tel:{{ apt.mobile_number }}">{{ apt.mobile_number }}</a>
+                    </div>
+                </td>
+                <td>{{ apt.service.name }}</td>
+                <td>
+                    <div style="font-weight: 500;">{{ apt.date|date:"D, M d, Y" }}</div>
+                    <div style="font-size: 0.875rem; color: var(--ink-muted);">{{ apt.time }}</div>
+                </td>
+                <td>
+                    <span class="badge {% if apt.status == 'PENDING' %}badge-pending{% elif apt.status == 'CONFIRMED' %}badge-completed{% else %}badge-closed{% endif %}">
+                        {{ apt.get_status_display }}
+                    </span>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5" style="text-align: center; color: var(--ink-muted); padding: 3rem;">No appointments found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

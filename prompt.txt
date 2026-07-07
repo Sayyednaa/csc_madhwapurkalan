@@ -1,0 +1,431 @@
+# CSC Centre Website - Complete Project Prompt
+
+Build a modern, premium, responsive Django 5 web application for my CSC (Common Service Centre). The website should primarily function as a business landing page with a custom admin dashboard for managing customer inquiries and website content.
+
+## Tech Stack
+
+* Django 5 (Latest)
+* Django Templates
+* HTMX
+* Alpine.js
+* Bootstrap 5 (or Tailwind if it results in a cleaner UI)
+* SQLite (default, easily switchable to PostgreSQL)
+* Mobile-first responsive design
+* Clean component-based structure
+
+## Design Theme
+
+The website should feel modern, minimal, trustworthy, and premium.
+
+Use:
+
+* Soft shadows
+* Rounded cards
+* Smooth animations
+* Gradient hero section
+* Professional icons
+* Fast loading
+* Excellent mobile experience
+* SEO-friendly structure
+
+---
+
+# Public Website Pages
+
+## 1. Home
+
+The homepage should include:
+
+### Hero Section
+
+Headline:
+"One Place for All Government & Digital Services"
+
+Subheading explaining our CSC centre.
+
+Buttons:
+
+* Contact Us
+* WhatsApp
+* Book Appointment
+
+---
+
+### Popular Services
+
+Display attractive service cards such as:
+
+* Aadhaar Services
+* PAN Card
+* Passport Assistance
+* Ayushman Card
+* Electricity Bill
+* Water Bill
+* Mobile Recharge
+* Train Ticket Booking
+* Flight Ticket Booking
+* Passport Photo
+* Printing
+* Photocopy
+* Lamination
+* Scanning
+* Resume Making
+* GST Services
+* Income Tax Return (ITR)
+* Driving Licence
+* Vehicle RC
+* Ration Card
+* Birth Certificate
+* Death Certificate
+* Income Certificate
+* Caste Certificate
+* Domicile Certificate
+
+Each card should have:
+
+* Icon
+* Short description
+* Learn More button
+* Contact button
+
+---
+
+### Why Choose Us
+
+Display professional feature cards:
+
+* Fast Service
+* Experienced Staff
+* Affordable Charges
+* Secure Document Handling
+* One Stop Solution
+* Customer Support
+
+---
+
+### Call To Action
+
+Large section encouraging visitors to contact us immediately.
+
+Buttons:
+
+* Call Now
+* WhatsApp
+* Contact Form
+
+---
+
+## 2. About Us
+
+Display:
+
+* Introduction
+* Our Mission
+* Our Vision
+* Years of Experience
+* Business Highlights
+
+---
+
+## 3. Services Page
+
+Organize services into categories.
+
+### Government Services
+
+* Aadhaar
+* PAN
+* Passport
+* Driving Licence
+* Voter ID
+
+### Certificates
+
+* Income
+* Caste
+* Domicile
+* Birth
+* Death
+
+### Banking
+
+* AEPS
+* Money Transfer
+* Mini Statement
+
+### Printing
+
+* Printing
+* Scanning
+* Photocopy
+* Lamination
+* Passport Photos
+
+### Digital Services
+
+* Resume
+* Online Forms
+* Ticket Booking
+* GST
+* ITR
+
+Each service page should include:
+
+* Description
+* Required Documents
+* Estimated Processing Time
+* Contact Button
+
+---
+
+## 4. Contact Page
+
+Include:
+
+* Contact Form
+* Phone Number
+* Email Address
+* WhatsApp Button
+* Business Hours
+* Address
+* Embedded Google Map using this exact location:
+
+https://share.google/1Oy2ZWF8wklkm8gw3
+
+The map should be interactive and responsive.
+
+---
+
+## 5. FAQ Page
+
+Include expandable FAQ cards.
+
+Examples:
+
+* What documents are required for PAN Card?
+* How long does Aadhaar update take?
+* Do I need an appointment?
+* What payment methods are accepted?
+
+---
+
+## Inquiry Form
+
+Fields:
+
+* Full Name
+* Mobile Number
+* Email
+* Service Interested In
+* Message
+
+Optional:
+
+* Upload Document
+
+When submitted:
+
+* Save in database
+* Show success message
+* Notify administrator
+
+---
+
+## Callback Request
+
+Fields:
+
+* Name
+* Mobile Number
+* Preferred Time
+* Service
+
+Admin should later mark:
+
+* Pending
+* Called
+* Completed
+
+---
+
+## Appointment Booking
+
+Fields:
+
+* Name
+* Mobile Number
+* Date
+* Time
+* Service
+* Message
+
+Store appointments inside database.
+
+---
+
+# Custom Admin Dashboard
+
+Do NOT use the default Django Admin for day-to-day operations.
+
+Create a beautiful custom admin panel.
+
+Dashboard should display:
+
+* Total Inquiries
+* Today's Inquiries
+* Appointments
+* Callback Requests
+* Unread Messages
+
+Use charts where appropriate.
+
+---
+
+# Inquiry Management
+
+Display:
+
+* Name
+* Phone
+* Email
+* Service
+* Date
+* Status
+* Notes
+
+Status:
+
+* New
+* Contacted
+* Closed
+
+Allow filtering by:
+
+* Date
+* Status
+* Service
+
+---
+
+# Appointment Management
+
+Allow administrator to:
+
+* Accept
+* Reject
+* Reschedule
+* Complete
+
+---
+
+# Callback Requests
+
+Display all callback requests.
+
+Status:
+
+* Pending
+* Called
+* Completed
+
+---
+
+# Service Management
+
+Administrator should be able to:
+
+* Add services
+* Edit services
+* Delete services
+* Upload icons
+* Upload images
+* Change descriptions
+* Enable/Disable services
+
+No code changes should be required.
+
+---
+
+# Website Content Management
+
+Administrator should be able to edit:
+
+* Hero Heading
+* Hero Subtitle
+* About Us content
+* Contact Details
+* Business Hours
+* Social Media Links
+* FAQ content
+
+Everything should be editable from the custom admin dashboard.
+
+---
+
+# Email Notifications
+
+Send an email to the administrator whenever:
+
+* A new inquiry is submitted
+* An appointment is booked
+* A callback request is received
+
+Optionally send a confirmation email to the customer.
+
+---
+
+# SEO Requirements
+
+Include:
+
+* Meta Title
+* Meta Description
+* Open Graph Tags
+* Sitemap
+* robots.txt
+* Canonical URLs
+* Schema.org Local Business structured data
+* Optimized page speed
+
+---
+
+# Analytics Dashboard
+
+Display:
+
+* Total Website Visitors
+* Most Viewed Services
+* Contact Form Submissions
+* Appointment Requests
+* Callback Requests
+* Monthly Growth
+
+---
+
+# Security
+
+* CSRF Protection
+* Rate limiting on forms
+* Server-side validation
+* Secure file uploads
+* Proper authentication
+* Permission-based admin access
+
+---
+
+# Code Quality
+
+Generate production-ready code with:
+
+* Modular Django apps
+* Reusable components
+* Clean architecture
+* Proper comments
+* Logging throughout the project
+* Environment variables for secrets
+* Well-organized templates
+* Static and media management
+* Scalable folder structure
+* Responsive UI across desktop, tablet, and mobile devices
+
+The final result should resemble a premium, professional business website with a powerful custom management dashboard that is easy to maintain and extend in the future.

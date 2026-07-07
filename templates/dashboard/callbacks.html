@@ -1,0 +1,36 @@
+{% extends 'dashboard/base.html' %}
+
+{% block page_title %}Callback Requests{% endblock %}
+
+{% block content %}
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Date Requested</th>
+                <th>Name</th>
+                <th>Mobile Number</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for callback in callbacks %}
+            <tr>
+                <td>{{ callback.created_at|date:"M d, Y H:i" }}</td>
+                <td style="font-weight: 500;">{{ callback.name }}</td>
+                <td><a href="tel:{{ callback.mobile_number }}">{{ callback.mobile_number }}</a></td>
+                <td>
+                    <span class="badge {% if callback.status == 'PENDING' %}badge-pending{% elif callback.status == 'CALLED' %}badge-completed{% else %}badge-closed{% endif %}">
+                        {{ callback.get_status_display }}
+                    </span>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4" style="text-align: center; color: var(--ink-muted); padding: 3rem;">No callback requests found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

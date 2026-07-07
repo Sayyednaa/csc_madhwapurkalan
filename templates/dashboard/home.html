@@ -1,0 +1,68 @@
+{% extends 'dashboard/base.html' %}
+
+{% block page_title %}Dashboard Overview{% endblock %}
+
+{% block content %}
+<div class="grid grid-cols-1 md-grid-cols-2" style="gap: 1.5rem; @media(min-width: 1024px) { grid-template-columns: repeat(4, 1fr); } mb-8;">
+    <div class="stat-card">
+        <h3 style="font-size: 1rem; color: var(--ink-muted); margin: 0;">Total Inquiries</h3>
+        <div class="stat-value">{{ total_inquiries }}</div>
+    </div>
+    
+    <div class="stat-card">
+        <h3 style="font-size: 1rem; color: var(--ink-muted); margin: 0;">Today's Inquiries</h3>
+        <div class="stat-value" style="color: var(--primary);">{{ today_inquiries }}</div>
+    </div>
+    
+    <div class="stat-card">
+        <h3 style="font-size: 1rem; color: var(--ink-muted); margin: 0;">Pending Appointments</h3>
+        <div class="stat-value" style="color: #D97706;">{{ pending_appointments }}</div>
+    </div>
+    
+    <div class="stat-card">
+        <h3 style="font-size: 1rem; color: var(--ink-muted); margin: 0;">Pending Callbacks</h3>
+        <div class="stat-value" style="color: #059669;">{{ pending_callbacks }}</div>
+    </div>
+</div>
+
+<div class="mt-8">
+    <div class="flex justify-between items-center mb-4">
+        <h3 style="margin: 0;">Recent Inquiries</h3>
+        <a href="{% url 'dashboard_inquiries' %}" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View All</a>
+    </div>
+    
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Service</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for inquiry in recent_inquiries %}
+                <tr>
+                    <td>
+                        <div style="font-weight: 500;">{{ inquiry.name }}</div>
+                        <div style="font-size: 0.875rem; color: var(--ink-muted);">{{ inquiry.mobile_number }}</div>
+                    </td>
+                    <td>{{ inquiry.service_interested.name|default:"General Inquiry" }}</td>
+                    <td>{{ inquiry.created_at|date:"M d, Y" }}</td>
+                    <td>
+                        <span class="badge {% if inquiry.status == 'NEW' %}badge-new{% elif inquiry.status == 'CONTACTED' %}badge-pending{% else %}badge-closed{% endif %}">
+                            {{ inquiry.get_status_display }}
+                        </span>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4" style="text-align: center; color: var(--ink-muted); padding: 2rem;">No inquiries yet.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
